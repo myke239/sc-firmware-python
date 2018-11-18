@@ -12,5 +12,7 @@ if [ -d "sc-firmware-python" ]; then
 
   mv -r ./* ../
 
+  cd ../
+
   rm -r sc-firmware-python
 fi
