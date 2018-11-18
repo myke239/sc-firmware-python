@@ -70,7 +70,7 @@ class Client(object):
 class LEDS(object):
 	LED_FREQ_HZ	= 800000  # LED signal frequency in hertz (usually 800khz)
         LED_DMA		= 5       # DMA channel to use for generating signal (try 5)
-        LED_BRIGHTNESS	= 220     # Set to 0 for darkest and 255 for brightest
+        LED_BRIGHTNESS	= 200     # Set to 0 for darkest and 255 for brightest
         LED_INVERT	= False   # True to invert the signal (when using NPN transistor level shift)
         LED_CHANNEL	= 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
         LED_STRIP	= ws.WS2811_STRIP_GRB   # Strip type and colour ordering
@@ -190,9 +190,9 @@ class ImpactSensor(object):
 
         def waitForImpact(self):
             print "Beginning 'Detect Impact' loop"
-            self.setup_interrupt(1088, 120, 320, 'z')
+            self.setup_interrupt(800, 120, 320, 'z')
             while self.sensor_on.isSet():
-                time.sleep(.25)
+                time.sleep(.05)
                 if(self.interrupt_axis == 'x'):
                     axis_reading = self.accel.x_axis_reading()
                 elif(self.interrupt_axis == 'y'):

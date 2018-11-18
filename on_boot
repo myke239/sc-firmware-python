@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd /home/pi
+
+git clone https://github.com/myke239/sc-firmware-python.git
