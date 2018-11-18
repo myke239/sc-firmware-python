@@ -10,9 +10,12 @@ if [ -d "sc-firmware-python" ]; then
 
   chmod +x on_boot
 
-  mv -r ./* ../
+  mv ./* ../
 
   cd ../
 
   rm -r sc-firmware-python
 fi
+
+
+exit 0
