@@ -2,4 +2,10 @@
 
 cd /home/pi
 
+rm -r sc-firmware-python
+
 git clone https://github.com/myke239/sc-firmware-python.git
+
+cd /sc-firmware-python
+
+chmod +x on_boot
